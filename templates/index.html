@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - FAKE NEWS</title>
+    <meta name="description" content="Projeto FAKE NEWS">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+                <div class="container"><a class="navbar-brand" href="#">FAKE NEWS BR</a><button data-bs-toggle="collapse" data-bs-target="#navcol-1" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-2">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"></li>
+                            <li class="nav-item"></li>
+                            <li class="nav-item"><a class="nav-link" href="https://sites.google.com/view/detector-de-fake-news/p%C3%A1gina-inicial" target="_blank">Sobre</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><button class="navbar-toggler" data-bs-toggle="collapse"></button>
+            <div class="collapse navbar-collapse" id="navcol-1"></div>
+        </div>
+    </nav>
+    <header class="text-center text-white masthead" style="background:url('assets/img/bg-masthead.jpg')no-repeat center center;background-size:cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto position-relative">
+                    <h1 class="mb-5">Cole seu texto abaixo e verificaremos qual a probabilidade de ser FAKE NEWS!</h1>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto position-relative">
+                    <form action="resultado" method="get">
+                        <div class="row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="text" placeholder="Cole aqui seu texto" name="strFAKE"></div>
+                            <div class="col-12 col-md-3"><button class="btn btn-primary btn-lg" type="submit" data-bs-target="resultado">Verificar</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overlay">
+        <div class="row">
+            <div class="col"><img width="100%" height="100%" src="assets/img/wordcloud2.png"></div>
+            <div class="col">
+                <div class="bg-dark"><canvas data-bss-chart="{&quot;type&quot;:&quot;pie&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Verdadeiro&quot;,&quot;Fake News&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Probabilidades&quot;,&quot;backgroundColor&quot;:[&quot;#426d46&quot;,&quot;rgb(154,35,35)&quot;],&quot;borderColor&quot;:[&quot;#4e73df&quot;,&quot;#4e73df&quot;],&quot;data&quot;:[&quot;0.8&quot;,&quot;0.2&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;},&quot;position&quot;:&quot;right&quot;},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;bold&quot;,&quot;display&quot;:true,&quot;text&quot;:&quot;Probabilidade de ser Verdadeira x Fake News&quot;,&quot;fontColor&quot;:&quot;#DDD&quot;,&quot;fontSize&quot;:13}}}"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <section class="showcase"></section>
+    <footer class="bg-light footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-start my-auto h-100">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a href="#">Sobre</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Contato</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Termos de Uso</a></li>
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">© FAKE NEWS 2021. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end my-auto h-100">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
