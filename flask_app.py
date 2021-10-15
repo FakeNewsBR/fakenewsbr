@@ -25,6 +25,8 @@ def main():
 @app.route('/news')
 def main_news():
     content_index['news'] = fn.getrandomfake()
+    content_index['vl_false'] = 50
+    content_index['vl_true'] = 50
     return render_template('index.html', **content_index)
 
 @app.route('/verificar', methods=['POST'])
