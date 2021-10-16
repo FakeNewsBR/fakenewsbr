@@ -32,11 +32,12 @@ def main_news():
 @app.route('/verificar', methods=['POST'])
 def verificar():
     if request.method == 'POST':
-        current_text = "optPre: " + request.form.get('optPre','0')    
-        current_text += " optFeature: " +  request.form.get('optFeature','0')    
-        current_text += " optClassifier: " +  request.form.get('optClassifier','0')        
+        current_text = " optClassifier: " +  request.form.get('optClassifier','0')
+        content_index['news'] = request.form.get('news',content_index['news'])        
         content_index['vl_false'] = int(model.modelo(content_index['news'])*100)
         content_index['vl_true'] = 100 - content_index['vl_false']
+        
+
     return render_template('index.html', **content_index)
 
 @app.route('/algoritmos.html')
