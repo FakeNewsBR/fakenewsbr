@@ -45,7 +45,7 @@ def algoritmos():
     return render_template('algoritmos.html', text = "")
 @app.route('/Ranking.html')
 def ranking():
-    return render_template('ranking.html', text = "")
+    return render_template('Ranking.html', text = "")
 @app.route('/DataBase.html')
 def database():
     return render_template('DataBase.html', text = "")
@@ -58,7 +58,6 @@ def getrandomfake_api():
 @app.route('/getfakedatabase')
 def getfakedatabase():
     return fn.getfakedatabase()
-
 
 #@app.route('/resultado',methods=['POST','GET'])
 #def result():
