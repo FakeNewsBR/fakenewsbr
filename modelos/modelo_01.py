@@ -4,18 +4,14 @@ from nltk.stem import SnowballStemmer
 import lightgbm as lgbm
 import nltk as nltk
 
-stemmer=SnowballStemmer('portuguese')
-stopwords = nltk.corpus.stopwords.words('portuguese')
-
-#Carregando modelo
-with open('modelos/modelo_lightgbm14102021.pkl', 'rb') as f:
-    modelo_carregado=pickle.load(f)
-
 def modelo(novo_texto):
     """
     Replicando os tratamentos que foram feitos para desenvolver o modelo, carregando o modelo que foi treinado
     e escorando.
     """
+    stemmer=SnowballStemmer('portuguese')
+    stopwords = nltk.corpus.stopwords.words('portuguese')
+    
     output=pd.DataFrame({'texto':[novo_texto]})
     data=output.copy()
     
@@ -50,7 +46,10 @@ def modelo(novo_texto):
        'Razao_Upper_Total', 'palavra_7exclamacoes', 'palavra_3exclamacoes',
        'palavra_...', 'palavra_.....']]
 
+    #Carregando modelo
+    with open('modelos/modelo_lightgbm14102021.pkl', 'rb') as f:
+        modelo_carregado=pickle.load(f)
+
     result = modelo_carregado.predict_proba(data)[0][0]
 
     return(result)
-
