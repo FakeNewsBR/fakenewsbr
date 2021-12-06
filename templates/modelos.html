@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Profile - Brand</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fonts/fontawesome5-overrides.min.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>FAKENEWSBR</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Detector</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="modelos.html"><i class="fas fa-user"></i><span>Modelos</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="Ranking.html"><i class="fas fa-table"></i><span>Ranking</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="DataBase.html"><i class="far fa-user-circle"></i><span>DataBase</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html"></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <h1>MBA MECAI-ICMC-USP</h1>
+                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"></div>
+                        </form><a href="https://sites.google.com/view/detector-de-fake-news/p%C3%A1gina-inicial">Sobre</a>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4">Modelos</h3>
+                    <div class="row mb-3">
+                        <div class="col-lg-8">
+                            <div class="row mb-3 d-none">
+                                <div class="col">
+                                    <div class="card textwhite bg-primary text-white shadow">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <p class="m-0">Peformance</p>
+                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                </div>
+                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                            </div>
+                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card textwhite bg-success text-white shadow">
+                                        <div class="card-body">
+                                            <div class="row mb-2">
+                                                <div class="col">
+                                                    <p class="m-0">Peformance</p>
+                                                    <p class="m-0"><strong>65.2%</strong></p>
+                                                </div>
+                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                            </div>
+                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card shadow mb-3">
+                                        <div class="card-header py-3">
+                                            <p class="text-primary m-0 fw-bold">Cadastro de Modelo</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="mb-3"><label class="form-label" for="autor"><strong>Autor</strong><br></label><input class="form-control" type="text" id="autor" placeholder="Nome do autor" name="username"></div><label class="form-label" for="username"><strong>Nome do Modelo</strong><br></label><input class="form-control" type="text" id="username" placeholder="Apelido do modelo" name="username">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col"><label class="form-label">Arquivo no Formato pickle</label><input class="form-control" type="file"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col"><label class="form-label" for="descricao">Descrição do Modelo</label><textarea class="form-control" id="descricao" rows="5" placeholder="Descreva o modelo com informações do pré-processamento realizado e técnica utilizada." name="nm_desc"></textarea></div>
+                                                </div>
+                                                <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Salvar Modelo</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © FakeNewsBR&nbsp;2021</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/bs-init-1.js"></script>
+    <script src="/static/js/bs-init.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/theme.js"></script>
+</body>
+
+</html>
