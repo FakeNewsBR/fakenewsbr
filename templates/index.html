@@ -84,9 +84,10 @@
                                                     <h5 class="mb-0">Classificador</h5>
                                                 </div>
                                                 <div class="card-body"><select class="form-select" name="optClassifier">
-                                                        <option value="0" selected="">{{Algoritmo}}</option>
-                                                        <option value="3">{{Segundo}}</option>
-                                                    </select></div>
+    <option value="{{models[0]}}" selected> {{models[0]}} </option>                     {% for model in models[1:] %}                               
+    <option value="{{model}}">{{model}}</option>
+    {% endfor %}">
+</select></div>
                                             </div>
                                         </div>
                                     </div>
@@ -105,9 +106,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Fake News&quot;,&quot;Notícia Verdadeira&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#e0655d&quot;,&quot;#1cc88a&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;{{vl_true}}&quot;,&quot;{{vl_false}}&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;labels&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;,&quot;fontSize&quot;:14},&quot;reverse&quot;:false,&quot;position&quot;:&quot;bottom&quot;},&quot;title&quot;:{&quot;fontStyle&quot;:&quot;normal&quot;,&quot;display&quot;:true,&quot;text&quot;:&quot;Probabilidades&quot;,&quot;fontSize&quot;:20,&quot;fontColor&quot;:&quot;#26A&quot;}}}"></canvas></div>
-                                        </div>
+                                        <div class="card-body"><img src="/static/img/barplot.png" loading="lazy" width="0" height="0"><img src="{{results}}" width="300" height="500" style="width: 500;height: 700;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +136,6 @@
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-    <script src="/static/js/bs-init-1.js"></script>
     <script src="/static/js/bs-init.js"></script>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/theme.js"></script>
